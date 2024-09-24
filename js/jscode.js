@@ -37,9 +37,27 @@ donateButton.addEventListener('click', function(){
     // remaining main balance
     const savingBalance = document.getElementById('main-balance');
     savingBalance.innerText = remainingBalance.toFixed(2);
+
+
+    const historyItem = document.createElement('div');
+    historyItem.className = 'bg-gray p-3 rounded-md border-1-2 border-indigo-300';
+    historyItem.innerHTML =`
+    <p class="text-xs text-black-500 font-bold " >${donateAmount.toFixed(2)} Donate for Flood at Noakhali, Bangladesh</p>
+    <p class="text-xs text-black-500 ">${new Date().toLocaleDateString() }</p>
+
+    `;
+    const historyContainer = document.getElementById('history-list');
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild )
+
+
+
+
+
+
+
     
 
-})
+});
 
 
 // history-tab Function
