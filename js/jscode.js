@@ -40,7 +40,7 @@ donateButton.addEventListener('click', function(){
 
 
     const historyItem = document.createElement('div');
-    historyItem.className = 'bg-gray p-3 rounded-md border-1-2 border-indigo-300';
+    historyItem.className = 'bg-gray p-3 rounded-md border-1-2 border-indigo-300 bg-red-100 card ';
     historyItem.innerHTML =`
     <p class="text-xs text-black-500 font-bold " >${donateAmount.toFixed(2)} Donate for Flood at Noakhali, Bangladesh</p>
     <p class="text-xs text-black-500 ">${new Date().toLocaleDateString() }</p>
@@ -72,6 +72,17 @@ historyTab.addEventListener('click', function(){
     document.getElementById('donate-card-a').classList.add('hidden');
 
     document.getElementById('history-section').classList.remove('hidden')
+
+    donateTab.addEventListener('click', function(){
+        donateTab.classList.add('bg-lime-400')
+        historyTab.classList.remove('bg-lime-400')
+
+        document.getElementById('donate-card-a').classList.remove('hidden');
+
+        document.getElementById('history-section').classList.add('hidden')
+
+
+    })
 
    
 
